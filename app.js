@@ -17,6 +17,18 @@ const cars = [
     { id: 3, name: "Nissan" }
 ];
 
+// Schema I-phone 
+const phones = [
+    { id: 1, name: "I Phone 8" },
+    { id: 2, name: "I Phone 10" },
+    { id: 3, name: "I Phone 12" }
+];
+
+// phones all 
+app.get('/phones', (req, res) => {
+  res.send(phones);
+}) ;
+
 // Car All 
 app.get('/cars', (req, res) => {
     res.send(cars);
