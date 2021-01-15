@@ -23,12 +23,12 @@ app.get('/cars', (req, res) => {
 });
 
 // Car By ID 
-// app.get('/cars/:id', (req, res) => {
-//     const car = cars.find(e => e.id == req.params.id);
-//     if (!car) return res.status(400).send("Data is None");
+app.get('/cars/:id', (req, res) => {
+    const car = cars.find(e => e.id == req.params.id);
+    if (!car) return res.status(400).send("Data is None");
 
-//     res.send(car);
-// });
+    res.send(car);
+});
 
 // insert Cars
 app.post('/cars', (req, res) => {
