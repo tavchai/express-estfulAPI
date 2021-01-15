@@ -24,10 +24,23 @@ const phones = [
     { id: 3, name: "I Phone 12" }
 ];
 
+// Module Phones 
+
 // phones all 
 app.get('/phones', (req, res) => {
   res.send(phones);
 }) ;
+
+// phones by id
+app.get('/phones/:id', (req, res) => {
+    const phone = phones.find(e => e.id == req.params.id);
+    if(!phone) return res.status(400).send("Data Phone is none");
+
+    res.send(phone); 
+});
+
+
+// Module Cars 
 
 // Car All 
 app.get('/cars', (req, res) => {
